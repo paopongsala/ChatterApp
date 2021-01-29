@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
-  background: #ad5389;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height:100vh;
-  width:100vw;
-  display:flex;
-  flex-direction: column;
-}
 
-.header{
-  background:white;
-}
 
 .App {
   text-align: center;
-  background: #67B26F;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ff6e7f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
+
 .header{
+  font-family: cursive;
   background:rgba(255,255,255,0.2);
   border-bottom:1px solid white;
   height: 2.5rem;
   display:flex;
   align-items: center;
   padding: 0 12px;
-  font-size:1.2rem;
-  color:white;
-  font-weight: bold;
+  font-size:1.5rem;
+  color: white;
 }
 .logo{
   height:1.8rem;
@@ -42,4 +31,71 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
+}
+
+.text-input{
+  background:rgba(255,255,255,0.2);
+  border-top:1px solid white;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textbox{
+  background: black;
+  width: 85%;
+  height:60%;
+  border-radius: 1rem;
+  color: white;
+  padding-left: 30px;
+  border: 1px solid gray;
+}
+
+.send-button{
+  width:2rem;
+  height: 2rem;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(35, 14, 129);
+  transform: rotate(-20deg);
+  
+}
+
+.send-button:hover{
+  background-color: rgb(35, 14, 129);
+  color:white;
+  cursor: pointer;
+}
+
+.textbox:focus, .send-button:focus{
+  outline: none;
+}
+
+.message{
+  color:white;
+  width:fit-content;
+  border:1px black solid;
+  background-color: black;
+  margin:2rem;
+  padding:0.7rem 0.7rem 0rem 0.7rem;
+  border-radius: 1rem;
+}
+
+.message::after {
+  background-color: black;
+  content: "\00a0";
+  display: block;
+  height: 0.9rem;
+  word-wrap: break-word;
+  text-align: left;
+  position: relative;
+  top: 0.4rem;
+  transform:             rotate( 45deg );
+      -moz-transform:    rotate( 45deg );
+      -ms-transform:     rotate( 45deg );
+      -o-transform:      rotate( 45deg );
+      -webkit-transform: rotate( 45deg );
+  width:  1rem;
 }

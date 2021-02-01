@@ -21,7 +21,7 @@ function TextInput(props) {
       onChange={e=> setText(e.target.value)}
       onKeyPress={keyPressed}
     />
-    <button className="send-button" onClick={sendMessage}>➤</button>
+    <button className="send-button" disabled={!text} onClick={sendMessage}>➤</button>
   </footer>
 }
 

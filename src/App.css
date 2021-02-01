@@ -60,7 +60,18 @@
   font-size: 1.2rem;
   color: rgb(35, 14, 129);
   transform: rotate(-20deg);
-  
+  margin-left: 5px;
+}
+
+.send-button[disabled]{
+  background:gray;
+  cursor: default;
+}
+
+.send-button[disabled]:hover{
+  background:gray;
+  cursor: default;
+  color: rgb(35, 14, 129);
 }
 
 .send-button:hover{
@@ -76,11 +87,14 @@
 .message{
   color:white;
   width:fit-content;
+  margin: 0.4rem 2rem 0.8rem 2rem;
   border:1px black solid;
   background-color: black;
-  margin:2rem;
   padding:0.7rem 0.7rem 0rem 0.7rem;
   border-radius: 1rem;
+  font-size: 0.7rem;
+  word-wrap: break-word;
+  text-align: left;
 }
 
 .message::after {
@@ -88,8 +102,6 @@
   content: "\00a0";
   display: block;
   height: 0.9rem;
-  word-wrap: break-word;
-  text-align: left;
   position: relative;
   top: 0.4rem;
   transform:             rotate( 45deg );
@@ -98,4 +110,11 @@
       -o-transform:      rotate( 45deg );
       -webkit-transform: rotate( 45deg );
   width:  1rem;
+}
+
+.messages{
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1;
+  overflow: auto;
 }

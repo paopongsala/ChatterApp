@@ -23,6 +23,59 @@
   font-size:1.5rem;
   color: white;
 }
+
+.name-picker{
+  background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  position: absolute;
+  right: 15px;
+  align-items: center;
+}
+
+.name-picker-box{
+  color: white;
+  background: black;
+  height:0.8rem;
+  width:6rem;
+  border-radius: 1rem;
+  border: 1px solid white;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+}
+
+.name-ok-button{
+  width:2rem;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 0.6rem;
+  color: rgb(35, 14, 129);
+  margin-left: 5px;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+
+}
+
+.name-edit-button{
+  width:2rem;
+  height: 2.2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(35, 14, 129);
+  margin:0px 0px 0px 5px;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.name-ok-button:hover, .name-edit-button:hover{
+  cursor: pointer;
+  color:black;
+}
+
+
 .logo{
   height:1.8rem;
   width:1.8rem;
@@ -61,6 +114,7 @@
   color: rgb(35, 14, 129);
   transform: rotate(-20deg);
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .send-button[disabled]{
@@ -80,7 +134,7 @@
   cursor: pointer;
 }
 
-.textbox:focus, .send-button:focus{
+.textbox:focus, .send-button:focus, .name-edit-button:focus, .name-picker-box:focus, .name-ok-button:focus{
   outline: none;
 }
 
@@ -118,3 +172,4 @@
   flex: 1;
   overflow: auto;
 }
+

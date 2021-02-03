@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import TextInput from './TextInput';
 import Message from './Message.js'
+import NamePicker from './NamePicker.js'
 
 function App() {
   const [messages,setMessages] = useState([])
@@ -9,7 +10,7 @@ function App() {
     <header className="header">
       <div className="logo" />
       Chatter
-      
+      <NamePicker />
     </header>
     <main className="messages">
 

@@ -140,15 +140,14 @@
 
 .message{
   color:white;
-  width:fit-content;
-  margin: 0.4rem 2rem 0.8rem 2rem;
+  width: fit-content;
+  margin: 0.9rem 2rem 1rem 2rem;
   border:1px black solid;
   background-color: black;
   padding:0.7rem 0.7rem 0rem 0.7rem;
   border-radius: 1rem;
   font-size: 0.7rem;
   word-wrap: break-word;
-  text-align: left;
 }
 
 .message::after {
@@ -173,3 +172,14 @@
   overflow: auto;
 }
 
+.message-row{
+  width: 100%;
+  position: relative;
+}
+
+.my-name-header{
+  color: rgb(51, 50, 50);
+  position: absolute;
+  font-size: 0.6rem;
+  left: 30px;
+}

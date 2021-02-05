@@ -1,12 +1,13 @@
 import {useState} from 'react'
 
-function NamePicker(){
+function NamePicker(props){
     const [showInput, setShowInput] = useState(false)
     const [username, setUsername] = useState('Set username:')
 
     function keyPressed(e){
         if(e.key==='Enter'){
             setShowInput()
+            props.saveName(username)
         }
     }
 
@@ -25,7 +26,10 @@ function NamePicker(){
 
     return <div className="name-picker">
         <div className="my-name">{username}</div>
-        <button className="name-edit-button" onClick={()=>setShowInput(true)}>
+        <button className="name-edit-button" onClick={()=> {
+            props.saveName(username);
+            setShowInput(true);
+        }}>
         ✎
         </button>
     </div>

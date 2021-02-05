@@ -6,11 +6,13 @@ import NamePicker from './NamePicker.js'
 
 function App() {
   const [messages,setMessages] = useState([])
+  const [username,setUsername] = useState('')
+
   return <div className="App">
     <header className="header">
       <div className="logo" />
       Chatter
-      <NamePicker />
+      <NamePicker saveName={name=> setUsername(name)} />
     </header>
     <main className="messages">
 
@@ -22,7 +24,7 @@ function App() {
 
     <TextInput 
       send={(t)=> setMessages(
-        [{text:t},...messages])
+        [{text:t, username:username},...messages])
       }
     />
   </div>

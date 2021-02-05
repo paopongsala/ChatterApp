@@ -18,7 +18,10 @@ function NamePicker(props){
                 onChange={e=> setUsername(e.target.value)}
                 onKeyPress={keyPressed}
             />
-            <button className="name-ok-button" onClick={()=>setShowInput(false)}>
+            <button className="name-ok-button" onClick={()=> {
+            props.saveName(username);
+            setShowInput(false);
+        }}>
                 OK
             </button>
         </div>
@@ -26,10 +29,9 @@ function NamePicker(props){
 
     return <div className="name-picker">
         <div className="my-name">{username}</div>
-        <button className="name-edit-button" onClick={()=> {
-            props.saveName(username);
-            setShowInput(true);
-        }}>
+        <button className="name-edit-button" onClick={()=> 
+            setShowInput(true)
+        }>
         ✎
         </button>
     </div>

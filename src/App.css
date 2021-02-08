@@ -148,6 +148,7 @@
   border-radius: 1rem;
   font-size: 0.7rem;
   word-wrap: break-word;
+  position: relative;
 }
 
 .message::after {
@@ -174,13 +175,15 @@
 }
 
 .message-row{
-  width: 50%;
-  position: relative;
+  width:100%;
+  display: flex;
 }
 
 .my-name-header{
   color: rgb(51, 50, 50);
   position: absolute;
   font-size: 0.6rem;
-  left: 30px;
+
+  top: -15px;
+  left: 7px;
 }

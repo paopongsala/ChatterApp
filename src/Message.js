@@ -1,13 +1,13 @@
 
-
 function Message(props){
 
 
-    return <div className="message-row">
-    <div className="my-name-header">{props.username}</div>
-    <div className="message">
-      {props.text}
-    </div>
+  return <div className="message-row"
+    style={{justifyContent: props.isMe ? 'flex-end' : 'flex-start'}}>
+  <div className="message">
+    <div className="my-name-header">{props.name}</div>
+    {props.text}
   </div>
+</div>
 }
 export default Message

@@ -183,7 +183,7 @@
   color: rgb(51, 50, 50);
   position: absolute;
   font-size: 0.6rem;
-
   top: -15px;
   left: 7px;
+  width: max-content;
 }

@@ -3,7 +3,7 @@ import {useState} from 'react'
 function NamePicker(props){
     const [showInput, setShowInput] = useState(false)
     const [username, setUsername] = useState(
-        localStorage.getItem('username') || 'Set username:')
+        localStorage.getItem('username') || '')
 
     function keyPressed(e){
         if(e.key==='Enter'){
